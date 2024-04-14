@@ -9,7 +9,7 @@ const SearchBar = ({ setResults }) => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((json) => {
-        const results = json.filter((user) => {
+        const result = json.filter((user) => {
           return (
             value &&
             user &&
@@ -17,7 +17,7 @@ const SearchBar = ({ setResults }) => {
             user.name.toLowerCase().includes(value)
           );
         });
-        setResults(results)
+        setResults(result);
       });
   };
 
