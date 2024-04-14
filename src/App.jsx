@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div className='App'>
       <div className="container">
-      <SearchBar  setResult={setResults}/>
-      <SearchResult/>
+      <SearchBar  setResults={setResults}/>
+      <SearchResult results={results}/>
       </div>
     </div>
   )
